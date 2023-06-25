@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import DotSpinner from '../../Animations/DotSpinner ';
 import {doc,getDoc,getFirestore} from "firebase/firestore"
+import CardButtons from '../CardButtons/CardButtons';
 
 const ItemDetailContainer = () => {
   const [productsData, setProductsData] = useState({});
@@ -44,7 +45,7 @@ console.log(productsData)
       <div className="Previous">{productsData.previous_price}</div>
           <div className="Price">${productsData.price}</div>
           <div className="Stock">{productsData.stock}</div>
-          <button className="Boton-Agregar">Agregar al Carrito</button>
+        <CardButtons/>
       </div>
     </div>
   );
